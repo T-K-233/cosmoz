@@ -1,4 +1,4 @@
-# Arduino
+# Arduino-Python
 Control Arduino with Python.
 
 
