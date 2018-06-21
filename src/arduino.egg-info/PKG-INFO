@@ -1,7 +1,7 @@
 Metadata-Version: 1.1
 Name: arduino
 Version: 0.0.1
-Summary: controlling Arduino with python. 
+Summary: control Arduino with python. 
 Home-page: https://github.com/T-K-233/arduino-python
 Author: -T.K.-
 Author-email: tk.fantasy.233@gmail.com

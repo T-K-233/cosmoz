@@ -2,6 +2,7 @@ README.md
 setup.py
 src/arduino/__init__.py
 src/arduino/board.py
+src/arduino/connection.py
 src/arduino/signal.py
 src/arduino.egg-info/PKG-INFO
 src/arduino.egg-info/SOURCES.txt
