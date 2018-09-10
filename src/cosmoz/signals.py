@@ -1,0 +1,5 @@
+HIGH = 1
+LOW = 0
+
+OUTPUT = 1
+INPUT = 0
