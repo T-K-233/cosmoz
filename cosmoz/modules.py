@@ -1,6 +1,27 @@
 from .signals import HIGH, LOW
 
+
 def motor_control(board, analogPin, digitalPin, value, threshold=.2):
+    '''
+    control a motor using the L298 controller.
+
+    @param board: a board object from <cosmoz.boards>. 
+    @param analogPin: an analog pin for the L298 controller. 
+    @param digitalPin: a digital pin for the L298 controller. 
+    @param value: the speed of the motor, negative for counterclockwise. 
+    @param threshold: the responsive to <value>. Defaults to 0.2.
+    '''
+    if value > threshold:
+        board.analogWrite(analogPin, value * 254)
+        board.digitalWrite(digitalPin, LOW)
+    elif value < -threshold:
+        board.analogWrite(analogPin, -value * 254)
+        board.digitalWrite(digitalPin, HIGH)
+    else:
+        board.digitalWrite(digitalPin, LOW)
+        board.digitalWrite(analogPin, LOW)
+
+def motor_control_2(board, analogPin, digitalPin, value, threshold=.2):
     '''
     control a motor using the L298 controller.
 
