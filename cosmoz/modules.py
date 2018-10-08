@@ -1,7 +1,7 @@
 from .signals import HIGH, LOW
 
 
-def motor_control(board, analogPin, digitalPin, value, threshold=.2):
+def motor_control(board, analogPin, digitalPin, value, threshold=.3):
     '''
     control a motor using the L298 controller.
 
@@ -53,7 +53,7 @@ def tank_drive(board, leftAnalogPin, leftDigitalPin, rightAnalogPin, rightDigita
     @param joystick: a joystick object from <cosmoz.joysticks>. 
     '''
     motor_control(board, leftAnalogPin, leftDigitalPin, joystick.axis[1])
-    motor_control(board, rightAnalogPin, rightDigitalPin, joystick.axis[3])
+    motor_control(board, rightAnalogPin, rightDigitalPin, -joystick.axis[3])
 
 def keyboard_drive(board, leftAnalogPin, leftDigitalPin, rightAnalogPin, rightDigitalPin, keyboard, throttle=0.6):
     '''
